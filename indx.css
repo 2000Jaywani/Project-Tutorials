@@ -1,0 +1,26 @@
+h1{
+    color: blue;
+    background-color: yellow;
+}
+
+body{
+    background: linear-gradient(rgb(227, 126, 126) , rgb(22, 235, 22));
+
+}
+button{
+    background-color: crimson;
+
+}
+
+.heading{
+    color: chocolate;
+    background-color: aquamarine;
+}
+
+#box
+{
+    height: 100px;
+    width: 100px;
+    border: 2px solid green;
+    background-color: rgb(237, 86, 16);   
+}

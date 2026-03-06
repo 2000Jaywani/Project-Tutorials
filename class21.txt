@@ -1,0 +1,677 @@
+document.addEventListener()
+===========================
+It is used to add handler to a function.
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+		
+	</head>
+	<body>
+			<h1 style="text-align:center"> Click Anywhere </h1>
+
+			<script type="text/javascript">
+				document.addEventListener('click',function(){
+					alert("Yahoo! you clicked");
+				})
+			</script>
+	</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+		<style type="text/css">
+			.myClass
+			{
+				color:blue;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+			<h1 style="text-align:center"> Click Anywhere </h1>
+
+			<script type="text/javascript">
+				document.addEventListener('click',f1)
+
+				function f1()
+				{
+					alert("Welcome to Javascript ");
+				}
+			</script>
+	</body>
+</html>
+
+ex:3
+------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+			<h1 id="hover"> Mouse Over Here !!! </h1>
+
+			<br>
+
+			<div id="result"></div>
+
+			<script type="text/javascript">
+				var x=document.getElementById('hover');
+
+				x.addEventListener('mouseover',f1);
+
+				function f1()
+				{
+			document.getElementById('result').innerHTML+="Mouse is over<br>";
+				}
+			</script>
+	</body>
+</html>
+
+ex:4
+-------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+			<h1 id="hover"> Mouse out Here !!! </h1>
+
+			<br>
+
+			<div id="result"></div>
+
+			<script type="text/javascript">
+				var x=document.getElementById('hover');
+
+				x.addEventListener('mouseout',f1);
+
+				function f1()
+				{
+			document.getElementById('result').innerHTML+="Mouse is out<br>";
+				}
+			</script>
+	</body>
+</html>
+
+Javascript program to convert Feet to Inches
+===============================================
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+			<table align="center">
+				<tr>
+					<td>Feet</td>
+					<td>&nbsp;</td>
+					<td>Inches</td>
+				</tr>
+				<tr>
+					<td><input type="text" id="feet"/></td>
+					<td><big>=</big></td>
+					<td><input type="text" id="inches"/></td>
+				</tr>
+			</table>
+
+			<script type="text/javascript">
+				var feet=document.getElementById('feet');
+				var inches=document.getElementById('inches');
+
+				feet.addEventListener('input',function(){
+					var f=this.value;
+					var i=f*12;
+					inches.value=i;
+				});
+
+				inches.addEventListener('input',function(){
+					var i=this.value;
+					var f=i/12;
+					if(!Number.isInteger(f))
+					{
+						f=f.toFixed(2);
+					}
+					feet.value=f;
+				})
+			</script>
+	</body>
+</html>
+
+ex:2
+-------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+			<table align="center">
+				<tr>
+					<td>Feet</td>
+					<td>&nbsp;</td>
+					<td>Inches</td>
+				</tr>
+				<tr>
+					<td><input type="text" id="feet"/></td>
+					<td><big>=</big></td>
+					<td><input type="text" id="inches"/></td>
+				</tr>
+			</table>
+
+			<script type="text/javascript">
+				var feet=document.getElementById('feet');
+				var inches=document.getElementById('inches');
+
+				feet.addEventListener('input',function(e){
+					var f=e.target.value;
+					var i=f*12;
+					inches.value=i;
+				});
+
+				inches.addEventListener('input',function(e){
+					var i=e.target.value;
+					var f=i/12;
+					if(!Number.isInteger(f))
+					{
+						f=f.toFixed(2);
+					}
+					feet.value=f;
+				})
+			</script>
+	</body>
+</html>
+
+
+removeEventListener()
+=======================
+It is used to remove the handler from function.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+			<h1 id="hover"> Mouse Over Here </h1>
+			<button onclick="f2()"> click here </button>
+			<br>
+			<div id="result"></div>
+
+			<script type="text/javascript">
+
+				var y=document.getElementById('hover');
+
+				y.addEventListener('mouseover',f1);
+
+				function f1()
+				{
+		document.getElementById('result').innerHTML+="Mouse over here <br>";
+				}
+
+			
+
+				function f2()
+				{
+			y.removeEventListener('mouseover',f1);
+		document.getElementById('result').innerHTML+="Mouse stop here <br>";
+				}				
+			</script>
+	</body>
+</html>
+
+
+JavaScript Date object
+======================
+Javascript Date object is used to display date and time.
+
+Using javascript Date object we can display timer on the web page.
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+			<script >
+					var date=new Date();
+					document.writeln(date);
+			</script>
+	</body>
+</html>
+
+ex:
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+			<script >
+					var date=new Date();
+					var h=date.getHours();
+					var m=date.getMinutes();
+					var s=date.getSeconds();
+					document.writeln(h+":"+m+":"+s);
+			</script>
+	</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+			<script >
+					var date=new Date();
+					var d=date.getDate();
+					var m=date.getMonth()+1;
+					var y=date.getFullYear();
+					document.writeln(d+"/"+m+"/"+y);
+			</script>
+	</body>
+</html>
+
+ex:4
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+		<style type="text/css">
+			body
+			{
+				height: 100vh;
+				background: linear-gradient(yellow,red);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			span
+			{
+				padding:10px;
+				box-shadow: 2px 2px 12px 6px #FFFFFF; 
+				color:#FFF;
+			}
+		</style>
+	</head>
+	<body>
+				<span id="result"> </span>
+
+				<script>
+					window.onload=function(){getTime();	}
+
+					function getTime()
+					{
+						var date=new Date();
+						var h=date.getHours();
+						var m=date.getMinutes();
+						var s=date.getSeconds();
+
+						m=check(m);
+						s=check(s);
+
+						document.getElementById('result').innerHTML=h+":"+m+":"+s;
+						
+
+					}
+					function check(i)
+					{
+						if(i<10)
+						{
+							i="0"+i;
+						}
+
+						return i;
+					}
+
+					setInterval("getTime()",1000);	
+				</script>
+	</body>
+</html>
+
+
+Q)What is the difference between innerText vs innerHTML ?
+
+innerText
+---------
+It is used to return normal text in output.
+ex:
+	
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+
+	</head>
+	<body>
+			<button onclick="f1()"> click here </button>
+
+			<br>
+
+			<div id="result"></div>
+
+			<script>
+				function f1()
+				{
+					document.getElementById('result').innerText="<h1>Hello</h1>";
+				}
+			</script>
+	</body>
+</html>
+
+innerHTML
+---------
+It is used to return normal text and html text in output.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+
+	</head>
+	<body>
+			<button onclick="f1()"> click here </button>
+
+			<br>
+
+			<div id="result"></div>
+
+			<script>
+				function f1()
+				{
+					document.getElementById('result').innerHTML="<h1>Hello</h1>";
+				}
+			</script>
+	</body>
+</html>
+
+
+Javascript hoisting
+=====================
+Java hoisting is a default behaviour of javascript where all the declaration will go to the top of the program.
+
+ex:
+----
+	<script>				<script>
+		i=10;					var i;
+		document.writeln(i); ==> 		i=10;	
+		var i;					document.writeln(i);
+	</script>				</script>
+
+
+ex:
+---
+
+	<script>				<script>
+		f1();					function f1()
+							{
+		function f1()				  document.writeln("Hello");
+		{					}
+		document.writeln("Hello"); ==> 	
+		}					f1();
+	</script>				</script>
+
+
+JavaScript recursion
+----------------------
+A function which call itself for many number of times is called recursion.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+
+	</head>
+	<body>
+			<script>
+							
+
+				function f1(i)
+				{
+					if(i<=10)
+					{
+						document.writeln(i);  
+						f1(i+1);
+					}
+				}
+
+				f1(1);	
+			</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

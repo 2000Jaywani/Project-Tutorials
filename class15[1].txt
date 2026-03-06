@@ -1,0 +1,571 @@
+Advantages of Javascript
+==========================
+It is used to develop intractive web pages.
+
+It is used to perform client side form validation.
+
+It is used to display dialog boxes and pop-up boxes.
+
+It is used to create dynamic web pages.
+
+It supports objects like Strings,Arrays,RegEx and etc.
+
+It supports Date and Time.
+
+It supports Cookies.
+
+It supports drop-down menu.
+
+It is loosely typed checking language.
+
+syntax:
+---------
+	<script type="text/javascript" language="javascript">
+		stmt1;
+		stmt2;
+		stmt3;		
+	</script>
+
+	Here "type" and "language" attribute is optional to declare.
+	Here semicolon i.e ';' is optional to declare.	
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script type="text/javascript" language="javascript">
+			document.write("Welcome to IHUB ");
+			document.write("This is JavaScript class");
+		</script>
+	</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			document.write("Welcome to IHUB ")
+			document.write("This is JavaScript class")
+		</script>
+	</body>
+</html>
+
+
+ex:3
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			document.write("Welcome to IHUB ");
+			<br>
+			document.write("This is JavaScript class");
+		</script>
+	</body>
+</html>
+
+Here no output because we can't place markup language in scripting language.
+To overcome this above limitation we need to use below example.
+
+ex:5
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			document.write("Welcome to IHUB ");
+			document.write("<br>");
+			document.write("This is JavaScript class");
+		</script>
+	</body>
+</html>
+
+In javascript we can declare html tags and css properties also.
+
+ex:6
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			document.write("<center>Welcome to IHUB</center>");
+			document.write("<br>");
+	document.write("<h1 style='color:blue'>This is JavaScript class</h1>");
+		</script>
+	</body>
+</html>
+
+Note:
+-----
+	If a program contains html ,css and javascript code then it is called 
+	DHTML i.e Dynamic Hypertext Markup Language.
+
+
+ex:7
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			document.writeln("Ihub");
+			document.writeln("Talent");
+		</script>
+	</body>
+</html>
+
+A document.writeln() will give one space at the end.
+
+
+JavaScript Engine
+==================
+It allow us to execute javascript code on browser window.
+
+It is responsible to convert user understandable scripting language to machine understandable scripting language.
+
+Bydefault every browser contains javascript engine.
+
+We have following list of javascript engine.
+
+ex:
+	Browser 		                        Engine
+	------			--------
+	Chrome			V8 Engine 
+	Mozilla			spider monkey
+	Edge			Chakra 
+	Opera			Charakan
+	and etc.	
+
+JavaScript comments
+====================
+Comments are created for documentation purpose.
+
+Javascript comments are used to improve readability of our code.
+
+Javascript comments will not display in output.
+
+We have two types comments in javascript.
+
+1)Single line comment
+-------------------
+	It is used to comment a single line.
+	ex:
+		// comment here 
+
+2)Multiple line comment
+------------------------
+	It is used to comment multiple lines.
+	IT is more convenient when compare to single line comment because we can 
+	comment single line as well as multiple lines.
+	ex:
+		/*
+			-
+			- comment here 
+			-
+		*/
+
+
+Output statement in javascript
+================================
+Output statements are used to display userdefined statements or data.
+
+We have two output statements in javascript.
+
+1) document.writeln()
+
+2) console.log() 
+
+1) document.writeln()
+--------------------
+It is used to display the output on browser window.
+ex:
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			document.writeln("<center>JavaScript Class</center>");
+		</script>
+	</body>
+</html>
+	 
+2)console.log()
+--------------
+It is used to display the output on browser console.
+
+To see the browser console we need to press F12 function key.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			console.log("This is Javascript");
+		</script>
+	</body>
+</html>
+
+
+Javascript variables
+=====================
+A name which is given to a memory location is called variable.
+
+Purpose of variable is used to store the data.
+
+In javascript , a variable is also known as identifier.
+
+A variable contains same rules as we have rules for an identifiers.
+
+Rule1:
+-----
+	A variable must and should starts with alphabet, underscore or dollar symbol.
+	ex:
+		var emp1;
+		var _emp2;
+		var $sal;
+
+Rule2:
+-------
+	A variable can't start with digits.
+	ex:
+		var  a123; //valid 
+		var  1abcd; // invalid 
+
+Rule3:
+-----
+	Every variable is a case sensitive.
+	ex:
+		var number;
+		var NUMBER;
+		var NumBer; 
+
+There are two types of variables in javascript.
+
+1)Local variable 
+
+2)Global variable 
+
+1)Local variable 
+----------------
+If we declare a variable inside the functions is called local variable.
+
+We can access local variable with in the function.
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			function f1()
+			{
+				//local variable
+				var a=10;
+				document.writeln(a);//10
+			}
+
+			//call the function
+			f1();
+		</script>
+	</body>
+</html>
+
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			function f1()
+			{
+				//local variable
+				var a=10;
+				document.writeln(a);//10
+			}
+			function f2()
+			{
+				document.writeln(a); // Error 
+			}
+
+			//call the function
+			f1();
+			f2();
+		</script>
+	</body>
+</html>
+
+2)Global variable
+-------------------
+If we declare a variable outside the function is called global variable.
+
+Global variable can access within the function and outside the function.
+
+ex:1
+------
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			//global variable
+			var a=100;
+
+			function f1()
+			{
+				document.writeln(a);//100
+			}
+			
+			//call the function
+			f1();
+			
+		</script>
+	</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			//global variable
+			var a=100;
+
+			function f1()
+			{
+				document.writeln(a);//100
+			}
+			function f2()
+			{
+				document.writeln(a);//100
+			}
+			
+			//call the function
+			f1();
+			f2();
+			
+		</script>
+	</body>
+</html>
+
+
+Types of Javascript
+======================
+We have two types of javascript.
+
+1)Internal Javascript / Embedded JavaScript
+
+2)External Javascript / Seperate JavaScript 
+
+1)Internal Javascript
+------------------------
+In internal javascript, we will mix javascript code and html code in ".html" file.
+
+Advantages:
+
+> There is no confusion of multiple files.
+
+> We can undstand html code and javascript code easily.
+
+Disadvantage: 
+
+> If code is increases then it will increase the complexity.
+
+Note:
+----
+	Internal javascript is best suitable for practicing level.
+
+
+
+2)External Javascript
+---------------------
+In external javascript, we will maintain html code in ".html" file and javascript
+code in ".js" file sperately.
+
+A javascript file can't execute directly on a browser window.We need to load or attach with .html file.
+
+Advantages:
+
+> We can maintain html code and javascript code seperately.
+
+> If code is increases then it will not increase the complexity.
+
+Disadvantages:
+
+> There is a confusion of multiple files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

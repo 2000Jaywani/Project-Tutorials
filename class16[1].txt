@@ -1,0 +1,1032 @@
+JavaScript Datatypes
+=====================
+Datatype describe what type of value we want to store inside a variable.
+
+Datatype also tells how much memory has to be created for a variable.
+
+Javascript is a dynamically typed language it means we should not declare any datatype during the variable declaration.
+
+To declare any variable we need to use "var" keyword.
+
+Internally javascript uses javascript engine to determine perticular datatype based on the value.
+
+In javascript, we have two types of datatypes.
+
+1)Primitive Datatypes
+
+2)Non-Primitive Datatypes 
+
+
+1)Primitive Datatypes
+-----------------------
+We have following list of primitive datatypes.
+
+Datatype		Description
+--------		------------
+Number			It is used to represent numbers.
+
+Boolean			It is used to represent boolean values.
+
+String			It is used to represent string.
+
+null			It is used to represent null.
+
+undefined 		It is used to represent undefined.
+
+
+Number
+-------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+		var a=10;
+		document.writeln(a+"<br>");
+		var b=10.56;
+		document.writeln(b+"<br>");
+	</script>
+</body>
+</html>
+
+Boolean
+-------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+		var a=true;
+		document.writeln(a+"<br>");
+		var b=false;
+		document.writeln(b+"<br>");
+	</script>
+</body>
+</html>
+
+string
+-------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+		var a="ihub";
+		document.writeln(a+"<br>");
+		var b='talent';
+		document.writeln(b+"<br>");
+	</script>
+</body>
+</html>
+
+null
+---------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+		var a=null;
+		document.writeln(a+"<br>");
+		
+	</script>
+</body>
+</html>
+
+undefined
+----------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+		var a;
+		document.writeln(a+"<br>");
+		
+	</script>
+</body>
+</html>
+
+
+2)Non-Primitive Datatypes 
+--------------------------
+We have following list of non-primitive datatypes.
+
+Datatype		Description
+----------		------------
+Object 			It is used to represent an instance through which we can
+			access members.
+
+Arrays			It is used to represent similar elements.
+
+RegEx			It is used to represent regular expression.
+
+
+
+JavaScript Operators
+=====================
+Operator is a symbol which is used to perform some operations on operands.
+
+It can be arithmetic operation, logical operation, conditional operation and etc.
+
+ex:
+	var c=a+b;
+
+	Here + and = are operators.
+	Here a,b and c are operands.
+
+We have following list of operations in javascript.
+
+1)Arithmetic operators
+
+2)Conditional operators 
+
+3)Bitwise operators
+
+4)Logical operators
+
+5)Assignment operators
+
+6)Special operators 
+
+1)Arithmetic operators
+------------------------
+We have following list of arithmetic operators.
+
+operator		description
+------------		-----------
+%			modules
+/			division
+*			multiplication
++			addition
+-			subtraction
+++			Incrementation 
+--			Decrementation 
+
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+		document.writeln((10%5)+"<br>");//0
+		document.writeln((10/2)+"<br>");//5
+		document.writeln((10*3)+"<br>");//30
+		document.writeln((20-10)+"<br>");//10
+		document.writeln((20+10)+"<br>");//30
+	</script>
+</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+		var a=10,b=20;
+
+		document.writeln((a++ + b++)+"<br>");//30
+
+		document.writeln((a-- - b--)+"<br>");//-10
+	</script>
+</body>
+</html>
+
+ex:3
+------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+		var a=10,b=20;
+
+		document.writeln((++a + ++b)+"<br>");//32
+
+		document.writeln((--a - --b)+"<br>");//-10
+	</script>
+</body>
+</html>
+
+2)Conditional operators 
+----------------------
+We have following list of conditional operators.
+
+Operator		Description
+----------		----------
+>			greater then 
+<			less then 
+>=			greater then equals to
+<=			less then equals to 
+==			equals to 
+!= 			not equals to 
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		document.writeln((10>20)+"<br>");//false
+
+		document.writeln((10<20)+"<br>");//true
+
+		document.writeln((10<=20)+"<br>");//true
+
+		document.writeln((20>=20)+"<br>");//true
+	</script>
+</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		document.writeln((10==10)+"<br>");//true
+
+		document.writeln((10==20)+"<br>");//false
+
+		document.writeln((10!=20)+"<br>");//true
+
+		document.writeln((20!=20)+"<br>");//false
+	</script>
+</body>
+</html>
+
+3)Bitwise operators
+---------------------
+We have following list of bitwise operators.
+
+Operator		Description
+---------		------------
+&			Bitwise AND 
+|			Bitwise OR 
+^			Bitwise XOR 
+~			Bitwise NOT
+>>			Right Shift
+<<			Left Shift 
+
+Bitwise AND (&)
+---------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10,b=15;
+		var c= a & b;
+		document.writeln(c);//10
+		/*
+			10 - 1010
+			15 - 1111
+			----------
+			&  - 1010
+					  <---
+			0*1 +  1*2  +  0*4 +  1*8
+			
+			0 + 2 + 0 + 8 
+
+			10 
+		*/	
+	
+	</script>
+</body>
+</html>
+
+Bitwise OR  (|)
+-------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10,b=15;
+		var c= a | b;
+		document.writeln(c);//15
+		/*
+			10 - 1010
+			15 - 1111
+			----------
+			|  - 1111
+					 <--
+			1*1 + 1*2 + 1*4 + 1*8
+			1 + 2 + 4 + 8 
+			15 
+		*/	
+	
+	</script>
+</body>
+</html>
+
+
+Bitwise XOR (^)
+------------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10,b=15;
+		var c= a ^ b;
+		document.writeln(c);//5
+		/*
+			10 - 1010
+			15 - 1111
+			----------
+			^  - 0101
+					 <--
+			1*1 + 0*2 + 1*4 + 0*8 
+			1 + 0 + 4 + 0
+			5
+		*/	
+	
+	</script>
+</body>
+</html>
+
+Bitwise NOT (~)
+--------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=~10;
+		document.writeln(a+"<br>");//-11
+
+		var b=~(-30);
+		document.writeln(b+"<br>");//29
+		
+	
+	</script>
+</body>
+</html>
+
+Right Shift (>>)
+--------------------
+10  >> 1 = 10/2
+
+10  >> 2 = 10/4
+
+10  >> 3 = 10/8
+
+10  >> 4 = 10/16
+
+ex:
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a = 200 >> 7;
+		document.writeln(a);// 200/128 
+		
+	
+	</script>
+</body>
+</html>
+
+Left Shift (<<)
+--------------------
+10  << 1 = 10*2
+
+10  << 2 = 10*4
+
+10  << 3 = 10*8
+
+10  << 4 = 10*16
+				
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a = 100 << 4;
+		document.writeln(a);// 100 * 16
+		
+	
+	</script>
+</body>
+</html>
+
+4) logical operators
+---------------------
+We have following list of logical operators.
+
+Operator		Description
+------------		----------
+&&			Logical AND 
+||			Logical OR 
+! 			Logical NOT 
+
+Logical AND (&&)
+---------------
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		
+		document.writeln(((5>6) && (6<9))+"<br>");//false
+		document.writeln(((50>6) && (6<9))+"<br>");//true
+		
+	
+	</script>
+</body>
+</html>
+
+
+Logical OR 
+----------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		
+		document.writeln(((5>6) || (6<9))+"<br>");//true
+		document.writeln(((5>6) || (60<9))+"<br>");//false
+		
+	
+	</script>
+</body>
+</html>
+
+
+Logical Not (!)
+---------------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		
+		document.writeln(!(5>6)+"<br>");//true
+	
+		document.writeln(!(50>6)+"<br>");//false
+	
+	</script>
+</body>
+</html>
+
+5)Assignment operators
+-----------------------
+We have following list of assignment operators.
+
+operator		description
+---------		------------
+=			equals to 
++=			addition and equals to 
+-=			subtraction and equals to 		
+*=			multiplication and equals to 
+/=			division and equals to 
+%=			modules and equals to 
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10;
+
+		a+=20;
+
+		document.writeln(a);// a = a+ 20
+	
+	</script>
+</body>
+</html>
+
+ex:
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10;
+
+		a-=20;
+
+		document.writeln(a);// a = a - 20
+	
+	</script>
+</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10;
+
+		a*=20;
+
+		document.writeln(a);// a = a * 20
+	
+	</script>
+</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10;
+
+		a/=20;
+
+		document.writeln(a);// a = a / 20
+	
+	</script>
+</body>
+</html>
+
+ex:
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10;
+
+		a%=20;
+
+		document.writeln(a);// a = a % 20
+	
+	</script>
+</body>
+</html>
+
+6)Special operators
+---------------------
+We have following list of special operators.
+
+operator		description
+-----------		-----------
+?:			It is used to represent conditional statements.
+
+new 			It is used to create an instance.
+
+typeof 			It is used to check type of an object.
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		(5>2)?document.writeln("TRUE"):document.writeln("FALSE");
+	
+	</script>
+</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		(5>20)?document.writeln("TRUE"):document.writeln("FALSE");
+	
+	</script>
+</body>
+</html>
+
+ex:3
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		var a=10;
+		document.writeln(typeof(a)+"<br>");//number
+
+		var b="hi";
+		document.writeln(typeof(b)+"<br>");//string
+
+		var c=true;
+		document.writeln(typeof(c)+"<br>");//boolean
+
+		var d=null;
+		document.writeln(typeof(d)+"<br>");//object 
+
+		var e;
+		document.writeln(typeof(e)+"<br>");//undefined
+	
+	</script>
+</body>
+</html>
+
+Interview Questions
+===================
+
+Q)What is the difference between == and === ?
+
+==
+-----
+It is used to check values are same or not.
+
+ex:
+---
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		document.writeln((1 == 1)+"<br>"); //true 
+
+		document.writeln((1 == true)+"<br>");//true 
+
+		document.writeln((0 == 0)+"<br>"); //true
+
+		document.writeln((false == 0)+"<br>");//true
+
+		document.writeln((10 == "10")+"<br>");//true 
+	
+	</script>
+</body>
+</html>
+
+===
+-----
+It will check values and datatypes are same or not.
+
+ex:
+	
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+	<script>
+	
+		document.writeln((1 === 1)+"<br>"); //true 
+
+		document.writeln((1 === true)+"<br>");//false
+
+		document.writeln((0 === 0)+"<br>"); //true
+
+		document.writeln((false === 0)+"<br>");//false
+
+		document.writeln((10 === "10")+"<br>");//false
+	
+	</script>
+</body>
+</html>
+
+
+Q)Write a javascript program to display sum of two numbers?
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>			
+			var val1=prompt("Enter the First Number :");
+			var val2=prompt("Enter the Second Number :");
+
+			var a=parseInt(val1);
+			var b=parseInt(val2);
+
+			var c=a+b;
+
+			document.writeln("sum of two numbers is ="+c);						
+
+
+		</script>
+	</body>
+</html>
+
+
+
+Q)Write a javascript program to perform swapping of two numbers?
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>IHUB TALENT</title>
+	</head>
+	<body>
+		<script>
+			
+			var a=10,b=20;
+
+			document.writeln("Before swapping A="+a+" and B="+b+"<br>");
+
+			//logic
+			var temp=a;
+			a=b;
+			b=temp;
+
+			document.writeln("After swapping A="+a+" and B="+b+"<br>");	
+		</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

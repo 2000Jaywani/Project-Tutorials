@@ -1,0 +1,820 @@
+Javascript promises
+=======================
+Promises are used to handle asynchronous operations in JavaScript. 
+
+They can handle multiple asynchronous operations easily and provide better 
+error handling than callbacks and events. 
+
+
+A Promise has four states: 
+
+1)fulfilled: Action related to the promise succeeded
+2)rejected: Action related to the promise failed
+3)pending: Promise is still pending i.e. not fulfilled or rejected yet
+4)settled: Promise has fulfilled or rejected
+
+A promise can be created using Promise constructor.
+
+Syntax:
+
+	var promise = new Promise(function(resolve, reject){
+     		//do something
+	});
+
+ex:1
+--------
+<script>
+var promise = new Promise(function(resolve, reject) {
+	resolve('IHub Talent');
+})
+
+promise
+	.then(function(successMessage) {
+	//success handler function is invoked
+		console.log(successMessage);
+	}, function(errorMessage) {
+		console.log(errorMessage);
+	})
+
+
+</script>
+
+ex:2
+--------
+<script>
+var promise = new Promise(function(resolve, reject) {
+	reject('Error occured');
+})
+
+promise
+	.then(function(successMessage) {
+	//success handler function is invoked
+		console.log(successMessage);
+	}, function(errorMessage) {
+		console.log(errorMessage);
+	})
+
+
+</script>
+
+
+ex:3
+----
+<script>
+var promise = new Promise(function(resolve, reject) {
+const x = "ihubtalent";
+const y = "ihubtalent1";
+if(x === y) {
+	resolve();
+} else {
+	reject();
+}
+});
+
+promise.
+	then(function () {
+		console.log('Success, You are a GEEK');
+	}).
+	catch(function () {
+		console.log('Some error has occurred');
+	});
+
+</script>
+
+ 
+Q)What is the difference between var , let and const ?
+
+var 				let			const
+-------				-----			--------
+It is a functional scope.	It is a block scope.	It is a block scope.
+
+We can declare without 		We can declare without	We can't declare without 
+initialization.			initialization.		initialization.
+
+It can be updated.		It can be updated.	It can't be updated.
+
+It can be redeclared.		It can't be redeclared.	It can't be redeclared.
+
+It can be accessible without	It can't be accessible 	It can't be accessible 
+declaration and default value	without declaration.	without declaration.
+is undefined.			 
+				
+
+
+
+initialization
+-------------------
+
+ex:1
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var i;
+		document.writeln(i); //undefined 
+	</script>
+	
+</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		let i;
+		document.writeln(i);
+	</script>
+	
+</body>
+</html>
+
+ex:3
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		const i;
+		document.writeln(i);
+	</script>
+	
+</body>
+</html>
+
+update:
+----------
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var i=10;
+		i=20;
+		document.writeln(i);
+	</script>
+	
+</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		let i=10;
+		i=20;
+		document.writeln(i);
+	</script>
+	
+</body>
+</html>
+
+ex:3
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		const i=10;
+		i=20;
+		document.writeln(i);
+	</script>
+	
+</body>
+</html>
+
+redeclared
+-----------
+
+ex:1
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var i=10;
+		var i=20;
+		document.writeln(i);//
+	</script>
+	
+</body>
+</html>
+
+ex:2
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		let i=10;
+		let i=20;
+		document.writeln(i);//C.T.E 
+	</script>
+	
+</body>
+</html>
+
+ex:3
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		const i=10;
+		const i=20;
+		document.writeln(i);//C.T.E 
+	</script>
+	
+</body>
+</html>
+
+accessible
+------------
+ex:1
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		
+		document.writeln(i);
+		i=10;
+		var i;
+	</script>
+	
+</body>
+</html>
+
+ex:2
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		document.writeln(i);
+		let i=10;
+		document.writeln(i);
+	</script>
+	
+</body>
+</html>
+
+ex:3
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		document.writeln(i);
+		const i=10;
+		document.writeln(i);
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+ 
+
+
+Q)What is JavaScript Math object?
+
+The JavaScript Math object allows you to perform mathematical tasks on numbers.
+ex:
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+		<script type="text/javascript">
+			
+		document.writeln(Math.ceil(10.6));
+
+		document.writeln(Math.floor(10.6));
+
+		document.writeln(Math.round(10.6));
+
+		document.writeln(Math.trunc(10.56));
+		</script>
+</body>
+</html>
+
+Object Oriented Programming System / Structure (OOPS)
+======================================================
+A technology or language said to be object oriented if it supports following features.
+
+ex:
+	class
+	object
+	abstraction
+	encapsulation
+	inheritance 
+	and 
+	polymorphism
+
+JavaScript is not a object oriented programming language . It is a object based programming language.
+
+
+Q)What is class in JavaScript?
+
+A JavaScript class is not an object.
+It is a template for JavaScript objects.
+Use the class keyword to create a class.
+A class keyword is used to declare a class with any particular name.
+According to JavaScript naming conventions, the name of the class always starts 
+with an uppercase letter.
+Ex:
+	<script>
+	class Example
+	{
+		-
+		-//code to be declare
+		-
+	}
+</script>
+
+
+
+
+Q)What is Constructor in JavaScript?
+
+A JavaScript constructor is a special type of method which is used to initialize and create an object.
+
+It is called when memory is allocated for an object.
+
+The constructor keyword is used to declare a constructor method.
+
+The class can contain one constructor method only.
+
+JavaScript allows us to use parent class constructor through super keyword.
+Ex:
+	class Example
+	{
+		constructor()
+		{
+			-
+			-// code to be declare
+			-
+		}
+	}
+
+
+Q)What is object in JavaScript?
+
+A JavaScript object is an entity having states and behaviors (properties and methods).
+Syntax:
+	var objectname =new Object();
+
+
+ex:1
+----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+		<script type="text/javascript">
+			class  Example
+			{
+				constructor()
+				{
+					document.writeln("Hello World");		
+				}	
+			}
+
+			var e=new Example();
+			
+
+		</script>
+</body>
+</html>
+
+
+ex:2
+------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+		<script type="text/javascript">
+			class  Example
+			{
+				constructor()
+				{
+					document.writeln("Hello World");		
+				}	
+			}
+
+			var e1=new Example();
+			var e2=new Example();
+
+
+		</script>
+</body>
+</html>
+
+ex:3
+-----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+		<script type="text/javascript">
+			class  Example
+			{
+				constructor(id)
+				{
+					document.writeln(id+"<br>");		
+				}	
+			}
+
+			var e1=new Example(101);
+			var e2=new Example(201);
+
+
+		</script>
+</body>
+</html>
+
+
+
+Q)What is Abstraction in JavaScript?
+
+Hiding internal implementation and highlighting the set of services is called Abstraction.
+
+The best example of Abstraction is GUI(Graphical User Interface) ATM machine where
+bank people will hide internal implementation and highlights the set of services like
+banking, withdrawal, mini statement, balance enquiry and etc.
+
+
+
+
+
+
+Q)What is Encapsulation in JavaScript?
+
+The process of wrapping property and function within a single unit is known as
+encapsulation.
+
+To achieve an encapsulation in JavaScript we need to do following things.
+> Use var keyword to make data members private.
+> Use setter methods to set the data and getter methods to get that data.
+
+ex:
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+		<script type="text/javascript">
+			class  Example
+			{
+				//setter 
+				constructor(id,name,sal)
+				{
+					this.eid=id;
+					this.ename=name;
+					this.esal=sal;
+				}
+
+				//getter 
+				getId()
+				{
+					return this.eid;
+				}	
+				getName()
+				{
+					return this.ename;
+				}
+				getSal()
+				{
+					return this.esal;
+				}
+
+			}
+			var e=new Example(101,'Alan',1000.0);
+			document.writeln(e.getId()+"<br>");
+			document.writeln(e.getName()+"<br>");
+			document.writeln(e.getSal()+"<br>");
+
+		</script>
+</body>
+</html>
+
+ex:2
+------
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+		<script type="text/javascript">
+			class  Example
+			{
+				//setter 
+				setId(id)
+				{
+					this.eid=id;
+				}
+				setName(name)
+				{
+					this.ename=name;
+				}
+				setSal(sal)
+				{
+					this.esal=sal;
+				}
+
+				//getter 
+				getId()
+				{
+					return this.eid;
+				}	
+				getName()
+				{
+					return this.ename;
+				}
+				getSal()
+				{
+					return this.esal;
+				}
+
+			}
+			var e=new Example(101,'Alan',1000.0);
+			e.setId(501);
+			e.setName("Jose");
+			e.setSal(2000.0);
+			document.writeln(e.getId()+"<br>");
+			document.writeln(e.getName()+"<br>");
+			document.writeln(e.getSal()+"<br>");
+
+		</script>
+</body>
+</html>
+
+
+Q)What is Inheritance in JavaScript?
+
+The JavaScript inheritance is a mechanism that allows us to create new classes on the
+basis of already existing classes.
+
+It provides flexibility to the child class to reuse the methods and variables of a parent class.
+
+The JavaScript extends keyword is used to create a child class on the basis of a parent class.
+
+ex:
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IHUB TALENT</title>
+</head>
+<body>
+		<script type="text/javascript">
+			class A
+			{
+				f1()
+				{
+					document.writeln("A-class <br>");
+				}
+			}
+			class B extends A
+			{
+				f2()
+				{
+					document.writeln("B-class <br>");
+				}	
+			}
+			var a=new A();
+			a.f1();
+			var b=new B();
+			b.f1();
+			b.f2();
+		</script>
+</body>
+</html>
+
+
+
+Q)What is polymorphism in JavaScript?
+
+The ability to represent in a different forms is called polymorphism.
+Ex:
+	class A
+	{
+		display()
+		{
+			document.writeln("A is invoked<br>");
+		}
+	}
+	class B extends A
+	{
+		display()
+		{
+			document.writeln("B is invoked");
+		}
+	}
+	A a=new A();
+	a.display(); // A is invoked
+	B b=new B();
+	b.display(); // B is invoked
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,25 @@
+/* #box
+{
+    height: 500px;
+    width: 100px;
+    border: 2px solid green;
+    background-color: rgb(237, 86, 16);   
+} */
+
+.content{
+    color: red;
+}
+
+.myClass{
+    background-color: green;
+}
+
+
+div
+{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    color: white;
+    border: 1px solid silver;
+}
