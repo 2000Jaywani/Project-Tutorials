@@ -1,0 +1,32 @@
+li
+{   
+    color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.continer-div{
+
+        width: 1000px;
+        height: 1000px;
+        background-color: cornflowerblue;
+}
+
+.my-class{
+
+        height: 100px;
+        width: 100px;
+        position: relative;
+        margin: 10px;
+        background-color: crimson;
+        border: 4px greenyellow double;
+}
+
+.center-div
+{
+    position: sticky;
+    left: 20px;
+    top: 60px;
+    margin-left: 50px;
+
+}

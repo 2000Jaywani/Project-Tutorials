@@ -1,0 +1,85 @@
+.pseudo-clss{
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+}
+
+.pseudo-clss:hover{
+    background-color: rgb(191, 241, 6);
+}
+
+a{
+    text-decoration: none;
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+}
+
+a:link{
+    background-color: rgb(232, 176, 176);
+}
+
+a:visited
+{
+    background-color: black;
+}
+
+a:hover{
+    background-color: chocolate;
+}
+
+
+.pseudo-elmt{
+    font-size: 20px;
+    word-spacing: 7px;
+}
+
+.pseudo-elmt::first-line{
+    color: blueviolet;
+}
+
+.pseudo-elmt::first-letter{
+    color: rgb(103, 156, 4);
+   font-size: 50px;
+}
+
+.pseudo-elmt::selection{
+    color: red;
+}
+
+.parent-div{
+    background-color: springgreen;
+    height: 500px;
+}
+
+.child-div{
+    height: 100px;
+    width: 100px;
+    margin: 200px;
+    padding: 30px;
+    
+    background-color: purple;
+    transform: translate(40vh,30vh) rotate(70deg) scale(1.5);
+    transition: 3s;
+    transition-delay: -1s;
+    transition-timing-function: ease-in-out;
+}
+
+.child-div:hover
+ {
+    transform: translate(40vh,30vh) rotate(30deg) scale(2.3); 
+    background-color: rgb(34, 34, 242);
+}
+
+@media screen and (max-width:640px) 
+{
+    .dv{display: none;}
+    .mv{display: block;}
+}
+
+@media screen and (amx-width:641px) 
+{
+    .dv{display: block;}
+    .mv{display: none;}
+}
+
